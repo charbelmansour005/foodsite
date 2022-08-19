@@ -12,6 +12,7 @@ function App() {
     // console.log("CATEGORIES ");
     fetch("http://192.34.109.55/BlaseExtra/Api/QRGETCATEGORIES", {
       method: "POST",
+      mode: 'no-cors',
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -33,6 +34,7 @@ function App() {
     // console.log(VALUE);
     fetch("http://192.34.109.55/BlaseExtra/Api/QRGELLALL", {
       method: "POST",
+      mode: 'no-cors',
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
