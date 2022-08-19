@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/foodsite/static/css/main.01a71211.chunk.css",
-    "main.js": "/foodsite/static/js/main.3c812da1.chunk.js",
-    "main.js.map": "/foodsite/static/js/main.3c812da1.chunk.js.map",
-    "runtime-main.js": "/foodsite/static/js/runtime-main.40b0a4b4.js",
-    "runtime-main.js.map": "/foodsite/static/js/runtime-main.40b0a4b4.js.map",
-    "static/js/2.bcc724ab.chunk.js": "/foodsite/static/js/2.bcc724ab.chunk.js",
-    "static/js/2.bcc724ab.chunk.js.map": "/foodsite/static/js/2.bcc724ab.chunk.js.map",
-    "index.html": "/foodsite/index.html",
-    "precache-manifest.f126a6c8498c9e1be1bd3474d1c8474b.js": "/foodsite/precache-manifest.f126a6c8498c9e1be1bd3474d1c8474b.js",
-    "service-worker.js": "/foodsite/service-worker.js",
-    "static/css/main.01a71211.chunk.css.map": "/foodsite/static/css/main.01a71211.chunk.css.map",
-    "static/js/2.bcc724ab.chunk.js.LICENSE.txt": "/foodsite/static/js/2.bcc724ab.chunk.js.LICENSE.txt"
+    "main.css": "./static/css/main.01a71211.chunk.css",
+    "main.js": "./static/js/main.3c812da1.chunk.js",
+    "main.js.map": "./static/js/main.3c812da1.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.9a51be4d.js",
+    "runtime-main.js.map": "./static/js/runtime-main.9a51be4d.js.map",
+    "static/js/2.bcc724ab.chunk.js": "./static/js/2.bcc724ab.chunk.js",
+    "static/js/2.bcc724ab.chunk.js.map": "./static/js/2.bcc724ab.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.23cf001c722d621e7fff7fe49fedcb55.js": "./precache-manifest.23cf001c722d621e7fff7fe49fedcb55.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.01a71211.chunk.css.map": "./static/css/main.01a71211.chunk.css.map",
+    "static/js/2.bcc724ab.chunk.js.LICENSE.txt": "./static/js/2.bcc724ab.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.40b0a4b4.js",
+    "static/js/runtime-main.9a51be4d.js",
     "static/js/2.bcc724ab.chunk.js",
     "static/css/main.01a71211.chunk.css",
     "static/js/main.3c812da1.chunk.js"
