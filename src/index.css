@@ -46,6 +46,7 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
 /*
 =============== 
 Global Styles
@@ -59,20 +60,24 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: var(--clr-grey-10);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 h1,
 h2,
 h3,
@@ -82,38 +87,49 @@ h4 {
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
+
 h1 {
   font-size: 3rem;
 }
+
 h2 {
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.25rem;
 }
+
 h4 {
   font-size: 0.875rem;
 }
+
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
   }
+
   h2 {
     font-size: 2.5rem;
   }
+
   h3 {
     font-size: 1.75rem;
   }
+
   h4 {
     font-size: 1rem;
   }
+
   body {
     font-size: 1rem;
   }
+
   h1,
   h2,
   h3,
@@ -121,6 +137,7 @@ p {
     line-height: 1;
   }
 }
+
 /*  global classes */
 
 /* section */
@@ -145,10 +162,21 @@ Menu
 .menu {
   padding: 5rem 0;
 }
+
 .title {
   text-align: center;
   margin-bottom: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+  /* font-style: italic; */
 }
+
+.Subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: monospace;
+  font-weight: bold;
+}
+
 .underline {
   width: 5rem;
   height: 0.25rem;
@@ -156,28 +184,59 @@ Menu
   margin-left: auto;
   margin-right: auto;
 }
+
+.Mobileunderline {
+  width: 5rem;
+  height: 0.2rem;
+  background: var(--clr-gold);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .btn-container {
   margin-bottom: 4rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
+
 .filter-btn {
   background: transparent;
-  border-color: transparent;
-  font-size: 1rem;
+  border-color: black;
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+  border-left: 1.5px solid black;
+  border-right: 1.5px solid black;
+  font-size: 0.8rem;
   text-transform: capitalize;
-  margin: 0 0.5rem;
+  margin: 0.5rem;
+  /* margin-left: 3.5%;
+  margin-right: 3.5%; */
   letter-spacing: 1px;
+  word-spacing: 1px;
   padding: 0.375rem 0.75rem;
-  color: var(--clr-gold);
+  color: black;
   cursor: pointer;
   transition: var(--transition);
-  border-radius: var(--radius);
+  border-radius: 0;
 }
+
 .filter-btn:hover {
   background: var(--clr-gold);
-  color: var(--clr-white);
+  color: var(--clr-black);
 }
+
+
+.filter-btn:active {
+  background: white;
+  cursor: wait;
+}
+
+.filter-btn:focus {
+  background-color: var(--clr-gold);
+  color: white;
+}
+
 .section-center {
   width: 90vw;
   margin: 0 auto;
@@ -186,33 +245,44 @@ Menu
   gap: 3rem 2rem;
   justify-items: center;
 }
+
 .menu-item {
   display: grid;
   gap: 1rem 2rem;
   max-width: 25rem;
+  margin-left: 10%;
+  margin-right: 10%;
+
 }
+
 .photo {
   object-fit: cover;
   height: 200px;
   width: 100%;
-  border: 0.25rem solid var(--clr-gold);
+  border: 0.22rem solid var(--clr-gold);
   border-radius: var(--radius);
   display: block;
 }
+
+
 .item-info header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 0.5px dotted var(--clr-grey-5);
+  border-bottom: 0.5px solid var(--clr-gold);
 }
+
 .item-info h4 {
   margin-bottom: 0.5rem;
 }
+
 .price {
   color: var(--clr-gold);
 }
+
 .item-text {
   margin-bottom: 0;
   padding-top: 1rem;
+  color: "black";
 }
 
 @media screen and (min-width: 768px) {
@@ -221,16 +291,228 @@ Menu
     gap: 0 1.25rem;
     max-width: 40rem;
   }
+
   .photo {
     height: 175px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .section-center {
     width: 95vw;
     grid-template-columns: 1fr 1fr;
   }
+
   .photo {
     height: 150px;
   }
+}
+
+.flex-container {
+  /* display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex; */
+  display: flex;
+  /* background-color: #1abc9c; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.child {
+  /* background-color: #ffffff; */
+  margin-left: 4vw;
+  /* padding: 20px;
+  width: 50px;
+  font-size: 20px; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* CSS */
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  /* padding: 5% 2% 1%; */
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  /* background-color: rgba(0, 0, 0, 0); */
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-52:after {
+  content: "";
+  background-color: var(--clr-gold);
+  /* background: linear-gradient(gray, white, black, var(--clr-gold)); */
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.1s;
+  border: 0;
+}
+
+.button-52:active {
+  cursor: wait;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}
+
+/* --------------------------------------------- */
+
+.priceCurrency {
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+/* -----------------------------------Mobile CSS-------------------------- */
+
+.Gridbox {
+  display: grid;
+  /* flex-wrap: wrap; */
+  grid-template-columns: 100px 100px 100px;
+  /* align-items: center; */
+  justify-content: center;
+
+}
+
+.Mobitem-info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid var(--clr-gold);
+}
+
+.Mobitem-info h4 {
+  margin-bottom: 0.5rem;
+}
+
+.mobilebutton {
+  /* background: transparent; */
+  background-color: transparent;
+  border-color: black;
+  border: 0.75px solid black;
+  font-size: 0.8rem;
+  margin: 0.1rem;
+  word-spacing: 0px;
+  padding: 0.400rem 0.3rem;
+  color: black;
+  transition: var(--transition);
+  border-radius: 0px;
+  font-family: fantasy;
+  font-weight: bold;
+  color: black;
+}
+
+.mobilebutton:hover {
+  background: linear-gradient(var(--clr-gold), rgb(255, 255, 255));
+  color: var(--clr-black);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* zoom: 0.80; */
+  border: 0.75px solid black;
+  font-weight: bold;
+}
+
+
+@media screen and (min-width: 1200px) {
+  .Mobilesection-center {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.Mobilesection-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.MobileSubtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: monospace;
+  font-weight: normal;
+  color: black;
+}
+
+.Mobilebox {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0px;
+  column-gap: 0em;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* -----------------------------------Mobile CSS end-------------------------- */
+/* CSS */
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
 }
