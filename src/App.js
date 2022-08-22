@@ -9,7 +9,6 @@ function App() {
   const [ite, setIte] = useState([]);
 
   useEffect(() => {
-    // console.log("CATEGORIES ");
     fetch("http://192.34.109.55/BlaseExtra/Api/QRGETCATEGORIES/", {
       method: "POST",
       headers: {
@@ -24,13 +23,12 @@ function App() {
         return response.json();
       })
       .then(function (responsejson) {
-        console.log(responsejson.CategoryList);
+        // console.log(responsejson.CategoryList);
         setCatego(responsejson.CategoryList);
       });
   }, []);
 
   const showData = (VALUE) => {
-    // console.log(VALUE);
     fetch("http://192.34.109.55/BlaseExtra/Api/QRGELLALL/", {
       method: "POST",
       headers: {
@@ -52,7 +50,7 @@ function App() {
         return response.json();
       })
       .then(function (responsejson) {
-        console.log(responsejson.ProductsManagement);
+        // console.log(responsejson.ProductsManagement);
         setIte(responsejson.ProductsManagement);
       });
   };
@@ -69,7 +67,6 @@ function App() {
               <h4 className="Subtitle">Choose a Category </h4>
               <div className="underline"></div>
             </div>
-            {/* CATEGORIES START */}
             <div className="child">
               {catego?.map((item, index) => {
                 return (
@@ -132,20 +129,42 @@ function App() {
               <article className="menu-item">
                 <img
                   className="photo"
-                  src="https://i.redd.it/vne3691qg8h91.png"
+                  src="https://i.redd.it/30ihenxui7j91.jpg"
                 />
                 <div className="item-info">
                   <header>
                     <h4> {item.nameEN}</h4>
-                    <h4> {item.nameAR}</h4>
+                    <h4 style={{ fontWeight: "bold" }}> {item.nameAR}</h4>
                   </header>
-                  <p className="item-text">
-                    <p style={{ color: "black" }}>{item.description}</p>
-                    <text className="priceCurrency">
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      borderBottom: "0.5px solid DarkGoldenRod",
+                    }}
+                  >
+                    <h5
+                      style={{
+                        fontStyle: "italic",
+                        fontWeight: "500",
+                        marginRight: "5px",
+                      }}
+                    >
+                      Category
+                    </h5>
+                    <h5 style={{ fontStyle: "italic", fontWeight: "500" }}>
+                      {item.category}
+                    </h5>
+                  </div>
+
+                  <div className="item-text">
+                    <h5 style={{ color: "black" }}>{item.description}</h5>
+                    <h5 className="priceCurrency">
                       {" "}
                       Price: {item.price} {item.cur}
-                    </text>
-                  </p>
+                    </h5>
+                  </div>
                   <button className="button-52">
                     <a
                       href={
@@ -173,23 +192,53 @@ function App() {
           {ite?.map((item, index) => {
             return (
               <article className="menu-item">
-                <img
-                  className="photo"
-                  src="https://i.redd.it/vne3691qg8h91.png"
-                />
+                <div className="container-div">
+                  <img
+                    className="photomobile"
+                    src="https://i.redd.it/30ihenxui7j91.jpg"
+                  />
+                </div>
+
                 <div className="Mobitem-info">
                   <header>
                     <h4> {item.nameEN}</h4>
                     <h4> {item.nameAR}</h4>
                   </header>
-                  <p className="item-text">
-                    <p style={{ color: "black" }}>{item.description}</p>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      borderBottom: "0.5px solid DarkGoldenRod",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    <h5
+                      style={{
+                        fontStyle: "italic",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Category
+                    </h5>
+                    <h5
+                      style={{
+                        fontStyle: "italic",
+                        fontWeight: "500",
+                        marginLeft: "13px",
+                      }}
+                    >
+                      {item.category}
+                    </h5>
+                  </div>
+                  <div className="item-text">
+                    <h5 style={{ color: "black" }}>{item.description}</h5>
 
-                    <text className="priceCurrency">
+                    <h5 className="priceCurrency">
                       {" "}
                       Price: {item.price} {item.cur}
-                    </text>
-                  </p>
+                    </h5>
+                  </div>
                   <button title={"Order via Whatsapp"} className="button-52">
                     <a
                       href={
@@ -201,7 +250,6 @@ function App() {
                         textDecoration: "none",
                         fontWeight: "bold",
                         fontSize: "1.1em",
-                        // fontFamily: "cursive",
                         fontWeight: "bold",
                       }}
                     >
@@ -220,3 +268,4 @@ function App() {
 }
 
 export default App;
+
